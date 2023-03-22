@@ -1,0 +1,576 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+:root{
+
+    --main-color:#f25454;
+}
+html{
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: var(--main-color);
+    color: white;
+}
+    /* Scrollbar style  */
+::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,128,77,0.6);
+	border-radius: 10px;
+    
+
+  } 
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-color); 
+    border-radius: 10px;
+ 
+  }
+
+@font-face{
+    font-family:"poppins" ;
+    src: url(../fonts/Poppins-Regular.ttf);
+    
+}
+
+/* Nav bar SECTION */
+.nav-link{
+    color: white;
+}
+nav.dark {
+    background-color: black;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+
+    color: var(--main-color) ;
+}
+.nav-link:focus, .nav-link:hover{
+    color: var(--main-color);
+}
+.navbar{
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width:992px) {
+    .social-icon{
+        display: none;
+    }    
+}
+
+/* Teris icon SECTION */
+.teris{
+  
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: black;
+    z-index: 1;
+    top: 20%;
+    transition: 0.5s all;
+}
+.teris a{
+
+    font-size: 1.4rem;
+    color: white;
+}
+.teris:hover {
+    background-color: grey;
+}
+@media screen and (max-width:700px) {
+    .teris {
+      display: none !important;
+    }
+    
+}
+
+
+
+/* home section */
+
+#home .first-slider{
+    background-image: url(../images/slideshow-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#home .second-slider{
+
+    background-image: url(../images/slideshow-2.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+#home .third-slider{
+
+    background-image: url(../images/slideshow-3.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+#home h1{
+    font-family: "poppins";
+
+    font-size: 4rem;
+}
+.arrows{
+ font-size: 1.4rem;
+ top: 50%;  
+}
+ .arrows .arrow-color{
+    color: white;
+    transition: 0.5s all;
+}
+.next, .prev{
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: whitesmoke;
+    transition: 0.5s all;
+}
+.next{
+
+    border-top: 0;
+}
+
+ .prev:hover {
+   background-color: white;
+   
+
+    
+}
+ .prev:hover .arrow-color {
+    color: var(--main-color)  ;
+}
+.next:hover {
+    background-color: white;
+   
+    
+    
+}
+.next:hover .arrow-color{
+    color: #f25454;
+}
+.animated-icon{
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    border: 1px solid white;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s all;
+    
+
+}
+.animated-icon::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    top:70%;
+    display: block;
+    animation: circle 2s linear infinite alternate ;
+
+}
+@keyframes circle {
+    0%{
+        top: 70%;
+    }
+    5%{
+        top:60%;
+    }
+    10%{
+        display: none;
+    }
+    15%{
+        top: 50%;
+    }
+    20%{
+        top:40%;
+    }
+    25%{
+        top:30%;
+    }
+    30%{
+        top: 20%;
+    }
+    35%{
+        top:10%;
+    }
+    40%{
+        top: 10%;
+    }
+    45%{
+      display: none;
+    }
+    50%{
+        top: 10%;
+    }
+    55%{
+        top: 10%;
+    }
+    60%{
+        top: 20%;
+    }
+    65%{
+        top: 30%;
+    }
+    70%{
+        top: 40%;
+    }
+    75%{
+        top: 50%;
+    }
+    80%{
+        top: 60%;
+    }
+ 
+    
+    
+}
+.animated-icon:hover {
+    border:1px solid var(--main-color);
+
+}
+
+/* About SECTION  */
+.title {
+
+    position: relative;
+    
+    
+}
+#about .title::before{
+    
+        content: 'A';
+        position: absolute;
+        font-size: 2em;
+        opacity: .06;
+        top: -0.5em;
+        left: 0;
+        right: 0;
+       
+      
+   
+}
+
+
+.title::after{
+
+    content: '';
+    position: absolute;
+     height: 2px;
+    width: 5%;
+    background-color: black; 
+
+    transition: 0.5s all;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.header-title:hover .title::after {
+  
+
+    width: 8%;
+}
+.first-skill{
+
+    width: 75%;
+}
+.second-skill{
+    width: 90%;
+}
+.third-skill{
+
+    width: 80%;
+}
+.fourth-skill{
+
+    width: 65%;
+}
+
+.progress-bar{
+    background-color: var(--main-color);   
+}
+
+/* Team SECTION */
+
+#team .title::before{
+    
+    content: 'O';
+    position: absolute;
+    font-size: 2em;
+    opacity: .06;
+    top: -0.5em;
+    left: 0;
+    right: 0;
+   
+  
+
+}
+.shadow{
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s all;
+    background-color: rgba(242, 84, 84, 0.85);;
+}
+.member:hover .shadow{
+    opacity: 1;
+}
+
+.image {
+    overflow: hidden;
+  
+    position: relative;
+}
+.image img {
+
+    transition: 1s all;
+}
+.image:hover img {
+    
+    transform: scale(1.2);
+}
+
+#team .social-icon-member{
+
+    color: white;
+}
+.member-name{
+    transition: 0.5s all;   
+}
+.member:hover .member-name{
+
+    color: var(--main-color);
+}
+
+.btn-custom{
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 3px;
+    
+    
+    font-weight: 700;
+    border-width: 0;
+    transition: all 0.1s ease-in;
+   
+}
+.btn-custom:hover{
+
+            background-color: #f38383;
+
+}
+@media screen  and (max-width:700px){
+    #team .member-footer  .row  {
+
+        text-align: center !important;
+    }
+    
+}
+
+/* Services SECTION */
+#services{
+
+    background-color: #f5f5f5;
+
+}
+#services .title::before{
+    
+    content: 'S';
+    position: absolute;
+    font-size: 2em;
+    opacity: .06;
+    top: -0.5em;
+    left: 0;
+    right: 0;
+   
+  
+
+}
+#services i{
+
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+.item-title{
+
+    transition: 0.5s all;
+}
+.item:hover  .item-title{
+    color: var(--main-color);
+}
+#feed .title::before{
+    
+    content: 'C';
+    position: absolute;
+    font-size: 2em;
+    opacity: .06;
+    top: -0.5em;
+    left: 0;
+    right: 0;
+   
+  
+
+}
+#feed .carousel-indicators [data-bs-target]{
+
+    text-indent: 0;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+#feed .carousel-indicators .active{
+    transform: scale(1.2);
+
+}
+.carousel-inner p{
+
+    font-size: 25px;
+    line-height: 1.5em;
+
+}
+/* Contact Section */
+#contact {
+
+    background-color: #f5f5f5;
+}
+#contact .title::before{
+    
+    content: 'G';
+    position: absolute;
+    font-size: 2em;
+    opacity: .06;
+    top: -0.5em;
+    left: 0;
+    right: 0;
+   
+  
+
+}
+#contact i{
+    font-size: 2rem;
+    color: var(--main-color);
+    
+}
+.contact-info{
+
+
+    border-bottom: 1px solid  #eee;
+}
+.contact-title{
+    transition: 0.5s all ;    
+}
+
+.contact-info:hover .contact-title{
+
+    color: var(--main-color);
+}
+.email{
+
+    transition: 0.5s all;
+}
+.email:hover {
+    color: var(--main-color) !important;
+}
+
+/* Footer SECTION */
+#footer {
+
+    
+    background: #222;
+   
+    background-image: url(../images/dotted-map.png);
+    background-size: contain;
+  
+}
+#footer .back-home{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #F25454;
+    opacity: .5;
+    transition: all .5s;
+}
+#footer .back-home:hover{
+    opacity: 1;
+}
+#footer a{
+    transition: 0.5s all;
+    color: #b0b0b0;
+   
+}
+#footer p{
+
+    color: #b0b0b0;
+}
+#footer a:hover{
+
+    color: var(--main-color);
+
+}
+#skills a{
+    color: #b0b0b0;
+    transition: 0.5s all;
+
+    border: 1px solid #eee;
+    text-decoration: none;
+    display: inline-block;
+
+}
+#skills a:hover{
+
+    border: 1px solid var(--main-color);
+}
+
+
+/* end SECTION */
+#end{
+
+    background-color: #1a1a1a;
+}
+#end .social-icon-member{
+    transition: 0.5s all;
+
+    color: white;
+}
+#end .social-icon-member:hover {
+    color: var(--main-color);
+}
+#end p{
+
+    color: #b0b0b0;
+}
+#end span a {
+    text-decoration: none;
+    transition: 0.5s all;
+    color: white;
+}
+#end span a:hover{
+
+    color: var(--main-color);
+}
+@media screen and (max-width:768px) {
+    #end ul a{
+        
+        margin: auto;
+      
+    }
+
+    
+    
+    
+}
